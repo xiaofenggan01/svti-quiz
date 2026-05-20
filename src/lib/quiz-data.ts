@@ -189,20 +189,20 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Initiative #3 ───
   {
-    scenario: "你发现一条没走过的路，但游戏时间已经很晚了……",
+    scenario: "你在矿洞深处，突然发现已经凌晨1点了……",
     options: [
-      { text: "回家睡觉，明天再来", icon: "/icons/Floor_TV.png", delta: { initiative: -3 } },
-      { text: "快速扫一眼附近就撤", icon: "/icons/Energy.png", delta: { initiative: 1 } },
-      { text: "继续走！晕倒在野外也是一种体验", icon: "/icons/Rusty_Sword.png", delta: { initiative: 3 } },
+      { text: "赶紧用传送图腾回农场！晕倒就亏了", icon: "/icons/Spa_Icon.png", delta: { initiative: -3 } },
+      { text: "再打一层看看，然后回家", icon: "/icons/Energy.png", delta: { initiative: 1 } },
+      { text: "继续往下冲！晕倒了也只损失一点钱", icon: "/icons/Rusty_Sword.png", delta: { initiative: 3 } },
     ],
   },
   // ─── Game Style #3 ───
   {
-    scenario: "酿酒桶出酒了，你怎么处理？",
+    scenario: "你收获了一批铱星品质的作物，你？",
     options: [
-      { text: "全部出货！金币滚滚来", icon: "/icons/Iridium_Node.png", delta: { game_style: -3 } },
-      { text: "留一瓶给自己，其他卖掉", icon: "/icons/Artisan_Icon.png", delta: { game_style: 0 } },
-      { text: "留着送给村民，帕姆阿姨最爱啤酒", icon: "/icons/Gus_Icon.png", delta: { game_style: 3 } },
+      { text: "全部塞进出貨箱！铱星价格最高", icon: "/icons/ShippingBox.png", delta: { game_style: -3 } },
+      { text: "留一部分自用或送礼，其他卖掉", icon: "/icons/Artisan_Icon.png", delta: { game_style: 0 } },
+      { text: "存进箱子慢慢送给喜欢的村民", icon: "/icons/Festivals_Icon.png", delta: { game_style: 3 } },
     ],
   },
   // ─── Speech Style #3 ───
@@ -216,11 +216,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Initiative #4 ───
   {
-    scenario: "威利邀请你出海，但家里的动物还没摸……",
+    scenario: "你今天的农活很早就做完了，还有大半天时间，你？",
     options: [
-      { text: "先摸完动物再说，它们等着我呢", icon: "/icons/Animals_Icon.png", delta: { initiative: -3 } },
-      { text: "快速摸完再赶去港口！", icon: "/icons/Willy_Icon.png", delta: { initiative: 0 } },
-      { text: "走走走！鱿鱼季不等人！动物明天摸也行", icon: "/icons/Dressed_Spinner.png", delta: { initiative: 3 } },
+      { text: "继续在农场整理，优化一下布局", icon: "/icons/Standard_Farm_Map_Icon.png", delta: { initiative: -3 } },
+      { text: "去镇上给村民送送礼", icon: "/icons/Pierre_Icon.png", delta: { initiative: 1 } },
+      { text: "带上食物冲进矿洞，看看能下到第几层！", icon: "/icons/The_Mines_Icon.png", delta: { initiative: 3 } },
     ],
   },
   // ─── Game Style #4 ───
@@ -279,11 +279,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Game Style #6 ───
   {
-    scenario: "NPC跟你说了他的烦心事，你？",
+    scenario: "皮埃尔商店外的布告栏有个求助任务，但你没有他要的物品，你？",
     options: [
-      { text: "嗯嗯好的知道了，该去干活了", icon: "/icons/Time_Icon.png", delta: { game_style: -3 } },
-      { text: "记下了，下次带个他喜欢的东西", icon: "/icons/Quests_Icon.png", delta: { game_style: 0 } },
-      { text: "立刻帮他解决！跑遍全镇也要找到他要的东西", icon: "/icons/Multiplayer_Icon.png", delta: { game_style: 3 } },
+      { text: "算了，奖励也没多少", icon: "/icons/Time_Icon.png", delta: { game_style: -3 } },
+      { text: "记下要什么，碰到了就交", icon: "/icons/Quests_Icon.png", delta: { game_style: 0 } },
+      { text: "翻遍箱子也要帮他凑齐！助人为乐", icon: "/icons/Multiplayer_Icon.png", delta: { game_style: 3 } },
     ],
   },
   // ─── Speech Style #6 ───
@@ -297,11 +297,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Initiative #7 ───
   {
-    scenario: "镇上节日活动开始了，你先……",
+    scenario: "夜市（Night Market）来了，只在冬天持续三天，你？",
     options: [
-      { text: "先把自己摊位的东西摆好", icon: "/icons/ShippingBox.png", delta: { initiative: -3 } },
-      { text: "去逛逛活动，感受节日氛围", icon: "/icons/Festivals_Icon.png", delta: { initiative: 1 } },
-      { text: "把活动地图的每个角落翻个遍！", icon: "/icons/Secret_Note_Icon.png", delta: { initiative: 3 } },
+      { text: "不去了，冬天农场的事也很多", icon: "/icons/Standard_Farm_Map_Icon.png", delta: { initiative: -3 } },
+      { text: "去逛一圈买点东西就回来", icon: "/icons/Festivals_Icon.png", delta: { initiative: 1 } },
+      { text: "三天都去！每个摊位都要看看", icon: "/icons/Secret_Note_Icon.png", delta: { initiative: 3 } },
     ],
   },
   // ─── Game Style #7 ───
@@ -324,11 +324,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Initiative #8 ───
   {
-    scenario: "你打开地图时最常看的是……",
+    scenario: "你攒够了材料可以修桥或修矿车，你会？",
     options: [
-      { text: "看看农场区域，确认一切正常", icon: "/icons/Standard_Farm_Map_Icon.png", delta: { initiative: -3 } },
-      { text: "看看NPC们都在哪里", icon: "/icons/Speech_bubble.png", delta: { initiative: 1 } },
-      { text: "哪些区域我还没探索过", icon: "/icons/Golden_Walnut.png", delta: { initiative: 3 } },
+      { text: "先用来升级自己的农场建筑", icon: "/icons/Quality_Sprinkler.png", delta: { initiative: -3 } },
+      { text: "等材料富余了再修", icon: "/icons/Hardwood.png", delta: { initiative: 1 } },
+      { text: "立刻去修！新区域在召唤！", icon: "/icons/Railroad_Icon.png", delta: { initiative: 3 } },
     ],
   },
   // ─── Game Style #8 ───
@@ -360,11 +360,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Game Style #9 ───
   {
-    scenario: "你看到两个NPC在吵架，你会？",
+    scenario: "你的配偶（或好友NPC）给你做了一顿早餐，你？",
     options: [
-      { text: "不关我的事，走了走了", icon: "/icons/The_Player_Icon.png", delta: { game_style: -3 } },
-      { text: "远远看一下热闹", icon: "/icons/Speech_bubble.png", delta: { game_style: 0 } },
-      { text: "过去了解情况，帮他们调解", icon: "/icons/Harvey_Icon.png", delta: { game_style: 3 } },
+      { text: "还行，省得自己做了", icon: "/icons/Cooking_Icon.png", delta: { game_style: -3 } },
+      { text: "挺温暖的，回送一个小礼物", icon: "/icons/Festivals_Icon.png", delta: { game_style: 0 } },
+      { text: "好感动！我要加倍对他/她好", icon: "/icons/Marriage_Icon.png", delta: { game_style: 3 } },
     ],
   },
   // ─── Speech Style #9 ───
@@ -387,11 +387,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   // ─── Game Style #10 ───
   {
-    scenario: "你最重要的游戏目标是什么？",
+    scenario: "你发现了一颗恐龙蛋，你？",
     options: [
-      { text: "赚够钱买一切想要的东西", icon: "/icons/Iridium_Node.png", delta: { game_style: -3 } },
-      { text: "100%完成度，一个都不落下", icon: "/icons/Achievements_Icon.png", delta: { game_style: -1 } },
-      { text: "和所有村民成为好朋友，看他们的故事", icon: "/icons/Abigail_Icon.png", delta: { game_style: 3 } },
+      { text: "卖掉！稀有物品价格很高", icon: "/icons/Iridium_Node.png", delta: { game_style: -3 } },
+      { text: "先孵化看看，也许有用", icon: "/icons/Bundle_Icon.png", delta: { game_style: 0 } },
+      { text: "孵出来当宠物养！太可爱了", icon: "/icons/Animals_Icon.png", delta: { game_style: 3 } },
     ],
   },
   // ─── Speech Style #10 ───
