@@ -33,15 +33,20 @@ export default function SVTIQuizPage() {
   const [answers, setAnswers] = useState<number[]>(new Array(TOTAL).fill(-1));
   const [slideDir, setSlideDir] = useState<1 | -1>(1);
   const [animKey, setAnimKey] = useState(0);
+  const busyRef = useRef(false);
 
   const startQuiz = useCallback(() => {
     setAnswers(new Array(TOTAL).fill(-1));
     setCurrentQ(0);
+    busyRef.current = false;
     setPhase("quiz");
   }, []);
 
   const selectOption = useCallback(
     (optionIdx: number) => {
+      if (busyRef.current) return;
+      busyRef.current = true;
+
       setAnswers((prev) => {
         const next = [...prev];
         next[currentQ] = optionIdx;
@@ -53,6 +58,7 @@ export default function SVTIQuizPage() {
           setSlideDir(1);
           setAnimKey((k) => k + 1);
           setCurrentQ((q) => q + 1);
+          busyRef.current = false;
         }, 300);
       } else {
         setTimeout(() => setPhase("result"), 400);
@@ -66,6 +72,7 @@ export default function SVTIQuizPage() {
       setSlideDir(-1);
       setAnimKey((k) => k + 1);
       setCurrentQ((q) => q - 1);
+      busyRef.current = false;
     }
   }, [currentQ]);
 
@@ -91,11 +98,10 @@ export default function SVTIQuizPage() {
 
   if (phase === "quiz") {
     const q = QUIZ_QUESTIONS[currentQ];
-    const answered = answers.filter((a) => a >= 0).length;
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-5 py-8">
         <div className="w-full max-w-md md:max-w-lg">
-          <ProgressBar current={answered} total={TOTAL} />
+          <ProgressBar current={currentQ + 1} total={TOTAL} />
           <div className="mt-6">
             <QuestionCard
               key={animKey}
@@ -267,13 +273,13 @@ function QuestionCard({
               key={optIdx}
               type="button"
               onClick={() => onSelect(optIdx)}
-              className={`w-full text-center px-5 py-4 md:py-5 rounded-xl border-2 transition-all duration-200
+              className={`w-full text-left px-5 py-4 md:py-5 rounded-xl border-2 transition-all duration-200
                 ${isSelected
                   ? "border-[#4a7c59] bg-[#4a7c59]/10 shadow-sm"
                   : "border-[#c4a35a]/15 bg-white/50 hover:border-[#c4a35a]/40 hover:bg-white/70 active:scale-[0.99]"
                 }`}
             >
-              <span className="flex items-center justify-center gap-3">
+              <span className="flex items-center gap-3">
                 <Image
                   src={opt.icon}
                   alt=""
